@@ -1,0 +1,12 @@
+
+<h1>My Flats</h1>
+
+<ul>
+  <% @flats.each do |list| %>
+    <li><%= link_to list.address%></li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to "Creat new list", new_flat_path, class: "btn btn-primary mb3"%>
