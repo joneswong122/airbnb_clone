@@ -1,13 +1,23 @@
 <div class="container">
-<h1>My Flats</h1>
-
-<ul>
-  <% @flats.each do |list| %>
-    <li><%= link_to list.address%></li>
-  <% end %>
-</ul>
-
-
-
-<%= link_to "Creat new list", new_flat_path, class: "btn btn-primary mb3"%>
+  <div>
+    <h1>My Flats</h1>
+  </div>
+    <% @flats.each do |list| %>
+  <div class="card" style="width: 20rem;">
+    <div class="card-body">
+        <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
+        <li ><%= list.address    %></li>
+        <li ><%= list.price  %></li>
+        <li ><%= list.room_type  %></li>
+        <li ><%= list.total_occupancy  %></li>
+        <%# <a href="#" class="btn btn-primary" link_to flat_path(@flat)>See more info</a> %>
+        <%= link_to "See more info", flats_path(@flat), class: "btn btn-primary mb3"%>
+    </div>
+  </div>
+  <%# <%= link_to "make a booking", new_flat_path, class: "btn btn-primary mb3"%>
+   <% end %>
 </div>
+
+<%# 2. why is my image not showing %>
+<%# 4. can you mix boostrap and usual css - certain classes are boostrap inbuilt, be careful with name%>
+<%# 5. use splash for image %>
