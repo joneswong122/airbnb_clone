@@ -2,9 +2,12 @@
 <h1>Bookings list</h1>
 
 <ul>
+<li><%#= @user.booking.find.flat %></li>
+<li><%= @user.email %></li>
 <% #if @bookings.confirm == true %>
-  <% #@flats.each do |list| %>
-    <li><%#= link_to list.address%></li>
+  <% #@bookings.each do |list| %>
+  <% #raise %>
+    <li><%#= link_to list.confirm %></li>
   <% #end %>
   <% #else %>
   <% #end %>
