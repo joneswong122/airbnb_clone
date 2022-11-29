@@ -18,7 +18,7 @@ flat5 =  { user_id: "1", price: "200", address: "High St, Menchester", total_occ
 flat6 =  { user_id: "1", price: "205", address: "High St, london", total_occupancy: "4", room_type: "family"}
 
 [flat1, flat2, flat3, flat4, flat5, flat6].each do |attributes|
-  @flats = Flat.create!(attributes)
-  # puts "Created #{flat.address}"
+  flat = Flat.create!(attributes)
+  puts "Created #{flat.address}"
 end
 puts "Finished!"
