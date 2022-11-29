@@ -3,19 +3,21 @@
   <div>
     <h1>My Flats</h1>
   </div>
+  <% if @user.owner == false %>
     <% @flats.each do |list| %>
-  <div class="card" style="width: 20rem;">
-    <div class="card-body">
-        <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
-        <li ><%= list.address    %></li>
-        <li ><%= list.price  %></li>
-        <li ><%= list.room_type  %></li>
-        <li ><%= list.total_occupancy  %></li>
-        <%# <a href="#" class="btn btn-primary" link_to flat_path(@flat)>See more info</a> %>
-        <%= link_to "See more info", flats_path(@flat), class: "btn btn-primary mb3"%>
-    </div>
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+            <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
+            <li ><%= list.address    %></li>
+            <li ><%= list.price  %></li>
+            <li ><%= list.room_type  %></li>
+            <li ><%= list.total_occupancy  %></li>
+            <%= link_to "See more info", flat_path(list), class: "btn btn-primary mb3"%>
+        </div>
+        <% end  %>
+    <% else %>
+
   </div>
-  <%# <%= link_to "make a booking", new_flat_path, class: "btn btn-primary mb3"%>
    <% end %>
 
 </div>
