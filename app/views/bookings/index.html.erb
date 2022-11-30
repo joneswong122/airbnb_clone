@@ -1,26 +1,12 @@
 <div class="container pt-3">
 <h1>Bookings list</h1>
 
-<ul>You have no bookings</ul>
-<ul>
-<li><%#= @user.booking.find.flat %></li>
-<li><%= %></li>
-<% #if @bookings.confirm == true %>
-  <% #@bookings.each do |list| %>
-  <% #raise %>
-    <li><%#= link_to list.confirm %></li>
-  <% #end %>
-  <% #else %>
-  <% #end %>
-</ul>
+<br>
 
 <% @bookings.each do |booking| %>
-<% if booking.user_id == current_user.id %>
-  <% booking.title %>
+  <%= booking.flat.address %>
   button
-  <li><% link_to "info", booking_path(booking)%></li>
-    <% end %>
+  <%= link_to "visit", flat_path(booking.flat)  %><br>
+  <% link_to "info", booking_path(booking)%><br>
 <% end %>
-</ul>
 </div>
-
