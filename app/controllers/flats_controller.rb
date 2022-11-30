@@ -1,6 +1,7 @@
 class FlatsController < ApplicationController
   def index
     @flats = Flat.all
+    @user = current_user
   end
 
   def new
@@ -11,13 +12,15 @@ class FlatsController < ApplicationController
     @user = current_user
     @flat = Flat.new(strong_params)
     @flat.user = @user
+    @user.owner = true
     @flat.save
-    redirect_to flats_path
-    # redirect_to flat_path(@flat)
+    redirect_to flats_path # index
+    # redirect_to flat_path(@flat) # show
   end
 
   def show
     @flat = Flat.find(params[:id])
+    @booking = Booking.new
   end
 
   private

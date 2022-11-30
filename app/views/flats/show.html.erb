@@ -1,5 +1,16 @@
-
+<div class="container d-flex">
+<div class="card">
+<div class="card-title">
 <h1><%= @flat.address %></h1>
 <h1><%= @flat.price %></h1>
 <h1><%= @flat.total_occupancy %></h1>
 <h1><%= @flat.room_type %></h1>
+
+<%= simple_form_for [@flat, @booking] do |f| %>
+<%= f.input :confirm %>
+<%= f.submit class: "btn btn-primary" %>
+<% end %>
+</div>
+</div>
+</div>
+</div>
