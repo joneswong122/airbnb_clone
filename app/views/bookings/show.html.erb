@@ -1,11 +1,42 @@
-<div class="container">
-<div class="card">
-<%= @booking.flat.address %>
-<%= @booking.flat.total_occupancy %>
-<%= @booking.flat.price %>
-<%= @booking.user.name %>
-<%= @booking.user.email %>
-<%= @booking.user.owner %>
-<%= @booking.status %>
-</div>
+<div class="map" style="background-image: url('<%= %>')"></div>
+
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @booking.flat.address%></h1>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <%= @booking.flat.total_occupancy %> Guests
+          </div>
+          <div class="flex ms-3">
+            <%= @booking.flat.price%>€
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-text" id="start-date-label">From:</span>
+            <input type="text" class="form-control" aria-label="start-date" aria-describedby="start-date-label">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text" id="end-date-label">To:</span>
+            <input type="text" class="form-control"  aria-label="end-date" aria-describedby="start-date-label">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
 </div>
