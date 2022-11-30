@@ -1,10 +1,12 @@
 <div class="container">
-<h3>Add a flat </h3>
+<h3 class="mt-3">Add a flat </h3>
 <%= simple_form_for(@flat) do |f| %>
+<%= f.input :title %>
 <%= f.input :address %>
 <%= f.input :price %>
 <%= f.input :room_type %>
 <%= f.input :total_occupancy %>
+<%= f.input :photo, as: :file %>
 <%= f.submit class: "btn btn-primary" %>
 <% end %>
 </div>

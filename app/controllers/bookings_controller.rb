@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
   def show
     # bookings/:id
     set_booking
+    @flats = Flat.all
   end
 
   def create
