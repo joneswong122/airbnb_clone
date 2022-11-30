@@ -23,9 +23,6 @@ class BookingsController < ApplicationController
     redirect_to booking_path(@booking)
   end
 
-  def show
-  end
-
   private
 
   def set_flat

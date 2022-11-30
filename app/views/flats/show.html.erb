@@ -9,7 +9,7 @@
 <h1><%= @flat.room_type %></h1>
 
 <%= simple_form_for [@flat, @booking] do |f| %>
-<% if @user.owner == false %>
+<% if @user.owner == true %>
 <%= f.input :status, as: :select, collection: [['Send Request to owner', '0']] %>
 <%= f.submit class: "btn btn-primary" %>
 <% else %>
