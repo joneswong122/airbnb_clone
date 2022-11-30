@@ -1,7 +1,7 @@
 class FlatsController < ApplicationController
   def index
     @flats = Flat.all
-    @user = current_user
+    user
   end
 
   def new
@@ -9,7 +9,7 @@ class FlatsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    user
     @flat = Flat.new(strong_params)
     @flat.user = @user
     @user.owner = true
@@ -21,11 +21,16 @@ class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
     @booking = Booking.new
+    user
   end
 
   private
 
+  def user
+    @user = current_user
+  end
+
   def strong_params
-    params.require(:flat).permit(:user_id, :price, :address, :room_type, :total_occupancy)
+    params.require(:flat).permit(:user_id, :price, :address, :room_type, :total_occupancy, :photo)
   end
 end
