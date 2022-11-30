@@ -1,13 +1,15 @@
 <div class="container pt-3">
 <h1>Bookings list</h1>
 
-<ul>
-<% #if @bookings.confirm == true %>
-  <% #@flats.each do |list| %>
-    <li><%#= link_to list.address%></li>
-  <% #end %>
-  <% #else %>
-  <% #end %>
-</ul>
+<ul>You have no bookings</ul>
 
+
+<% @bookings.each do |booking| %>
+<% if booking.user_id == current_user.id %>
+  <% booking.title %>
+  button
+  <li><% link_to "info", booking_path(booking)%></li>
+    <% end %>
+<% end %>
+</ul>
 </div>
