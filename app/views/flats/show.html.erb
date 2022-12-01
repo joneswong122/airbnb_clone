@@ -1,12 +1,12 @@
 <div class="container d-flex">
 <div class="card">
 <div class="card-title">
-<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
-<h1><%= @flat.title %></h1>
-<h1><%= @flat.address %></h1>
-<h1><%= @flat.price %></h1>
-<h1><%= @flat.total_occupancy %></h1>
-<h1><%= @flat.room_type %></h1>
+<%# <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill %>
+<%# <h1><%= @flat.title %></h1>
+<h2>Address:  <%= @flat.address %></h2>
+<h3>Price: £<%= @flat.price %></h3>
+<h3>Rooms: <%= @flat.total_occupancy %></h3>
+<h3>Room Type: <%= @flat.room_type %></h3>
 
 <%= simple_form_for [@flat, @booking] do |f| %>
 <% if @user.owner == true %>

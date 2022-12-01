@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   before_action :set_flat, only: [:create]
   def index
     @user = current_user
-    @bookings = Booking.all
+    # @bookings = Booking.all
+    @bookings = current_user.bookings
     @flats = Flat.all
   end
 
@@ -19,8 +20,8 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.flat = @flat
     @booking.save
-    # redirect_to bookings_path
-    redirect_to booking_path(@booking)
+    redirect_to bookings_path
+    # redirect_to booking_path(@booking)
   end
 
   private
