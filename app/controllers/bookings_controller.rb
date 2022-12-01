@@ -35,6 +35,6 @@ class BookingsController < ApplicationController
   end
 
   def strong_params
-    params.require(:booking).permit(:user_id, :flat_id, :confirm)
+    params.require(:booking).permit(:user_id, :flat_id, :confirm, :start_time, :end_time)
   end
 end

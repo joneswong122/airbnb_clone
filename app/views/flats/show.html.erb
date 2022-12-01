@@ -8,8 +8,10 @@
 <h3>Rooms: <%= @flat.total_occupancy %></h3>
 <h3>Room Type: <%= @flat.room_type %></h3>
 
-<%= simple_form_for [@flat, @booking] do |f| %>
-<% if @user.owner == true %>
+<%= simple_form_for [@flat, @booking], data: { controller: 'flatpickr'} do |f| %>
+<% if @user.owner == false %>
+<%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+<%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
 <%= f.input :status, as: :select, collection: [['Send Request to owner', '0']] %>
 <%= f.submit class: "btn btn-primary" %>
 <% else %>
