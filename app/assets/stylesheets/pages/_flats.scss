@@ -2,7 +2,6 @@
 //   font-size: 50px
 // }
 
-
 //.card {
   // display: flex;
   // justify-content: space-evenly;
@@ -26,6 +25,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 20px;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
 
 
@@ -41,9 +41,11 @@
 
 // @darkGrey: #4f585e;
 
+
 .card {
   transition: all .5s ease;
   font-family:'Montserrat', sans-serif;
+
   margin: 20px;
   border-bottom-right-radius: 2em;
   border-bottom-left-radius: 2em;
@@ -130,4 +132,5 @@ background-color: rgb(244, 238, 238);
 
 .card-footer:hover {
   border-top: #FF5A5F;
+
 }
