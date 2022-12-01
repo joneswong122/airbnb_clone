@@ -10,10 +10,10 @@ require "open-uri"
 puts "Cleaning database..."
 Booking.destroy_all
 puts "Bookings deleted"
-User.destroy_all
-puts "Users deleted"
 Flat.destroy_all
 puts "Flats deleted"
+User.destroy_all
+puts "Users deleted"
 
 puts "\ncreating users..."
 first_user = User.create!(email: "jones_wong@icloud.com", password: "jones_wong@icloud.com")
