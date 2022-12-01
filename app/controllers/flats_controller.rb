@@ -31,6 +31,6 @@ class FlatsController < ApplicationController
   end
 
   def strong_params
-    params.require(:flat).permit(:user_id, :price, :address, :room_type, :total_occupancy, :photo)
+    params.require(:flat).permit(:user_id,:title, :price, :address, :room_type, :total_occupancy, :photo)
   end
 end
