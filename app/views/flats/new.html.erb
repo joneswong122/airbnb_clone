@@ -4,8 +4,8 @@
   <%= f.input :title %>
   <%= f.input :address %>
   <%= f.input :price %>
-  <%= f.input :room_type %>
-  <%= f.input :total_occupancy %>
+  <%= f.input :room_type, as: :select, collection: [['Single Room', 'Single Room'], ['Double Room', 'Double Room'], ['Family Room', 'Family Room'], ['Others', 'Others']] %>
+  <%= f.input :total_occupancy, as: :select, collection: [['1 Guest', '1'], ['2 Guest', '2'], ['3 Guest', '3'], ['4 or more guest', '4+']] %>
   <%= f.input :photo, as: :file %>
   <%= f.submit class: "btn btn-primary" %>
   <% end %>
