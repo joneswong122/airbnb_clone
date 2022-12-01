@@ -12,7 +12,7 @@ class FlatsController < ApplicationController
     user
     @flat = Flat.new(strong_params)
     @flat.user = @user
-    @user.owner = true
+    user.owner = true
     @flat.save
     redirect_to flats_path # index
     # redirect_to flat_path(@flat) # show
@@ -31,6 +31,6 @@ class FlatsController < ApplicationController
   end
 
   def strong_params
-    params.require(:flat).permit(:user_id,:title, :city, :price, :address, :room_type, :total_occupancy, :photo)
+    params.require(:flat).permit(:user_id, :title, :city, :price, :address, :room_type, :total_occupancy, :photo)
   end
 end

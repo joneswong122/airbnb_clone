@@ -5,7 +5,7 @@
         <div class="card-group">
           <div class="griddy">
             <div class="card">
-              <img src="<%= image_path 'flats_7.webp'%>" class="card-img-top" alt="...">
+              <%= cl_image_tag list.photo.key, class: "card-img-top" %>
               <div class="card-body">
                 <h5 class="card-title"><%= list.title %></h5>
                 <p class="card-text"><%= list.address  %>.</p>
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="card">
-              <img src="<%= image_path 'flats_5.jpg'%>" class="card-img-top" alt="...">
+              <%= cl_image_tag list.photo.key, class: "card-img-top" %>
               <div class="card-body">
                 <h5 class="card-title"><%= list.title %></h5>
                 <p class="card-text"><%= list.address  %>.</p>
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="card">
-              <img src="<%= image_path 'flats_6.jpg' %>" class="card-img-top" alt="...">
+              <%= cl_image_tag list.photo.key, class: "card-img-top" %>
               <div class="card-body">
                 <h5 class="card-title"><%= list.title %></h5>
                 <p class="card-text"><%= list.address  %>.</p>
@@ -47,4 +47,3 @@
     <% end %>
   </div>
 </body>
-

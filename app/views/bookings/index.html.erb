@@ -10,9 +10,11 @@
   <br>
   <%= booking.flat.city %>
   <br>
-  <%= booking.start_time %>
+  <%= booking.start_time.strftime(' %a, %d %B, %Y, %H:%M %P') %>
   <br>
-  <%= booking.end_time %>
+  <%= booking.end_time.strftime(' %a, %d %B, %Y, %H:%M %P') %>
+  <br>
+  <%= booking.flat.total_occupancy %>
   <br>
   <%= booking.user.email %>
   <hr>
