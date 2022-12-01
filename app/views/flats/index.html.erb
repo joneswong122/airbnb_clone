@@ -1,8 +1,5 @@
 <div class="container">
 <h1>My Flats</h1>
-
-
-
   <% if @user.owner == false %>
     <div class="griddy">
       <% @flats.each do |list| %>
@@ -12,10 +9,7 @@
             <%# <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
             <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
             <%# <li ><%= list.title    %>
-            <li ><%= list.address    %></li>
-            <li ><%= list.price  %></li>
-            <li ><%= list.room_type  %></li>
-            <li ><%= list.total_occupancy  %></li>
+
             <%= link_to "See more info", flat_path(list), class: "btn btn-primary mb3"%>
           </div>
         </div>
@@ -27,3 +21,36 @@
 <%# 2. why is my image not showing %>
 <%# 4. can you mix boostrap and usual css - certain classes are boostrap inbuilt, be careful with name%>
 <%# 5. use splash for image %>
+<div class="griddy">
+<% if @user.owner == false %>
+  <% @flats.each do |list| %>
+   <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?apartments" alt="wave" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+            <li ><%= list.address  %></li>
+            <li ><%= list.price  %>$</li>
+            <li ><%= list.room_type  %></li>
+            <li ><%= list.total_occupancy  %></li>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%end%>
+<%end%>
+</div>
