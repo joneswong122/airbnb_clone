@@ -12,7 +12,7 @@ Booking.destroy_all
 puts "Bookings deleted"
 User.destroy_all
 puts "Users deleted"
-Flat.des
+Flat.destroy_all
 puts "Flats deleted"
 
 puts "\ncreating users..."
