@@ -2,46 +2,49 @@
   <div class="container">
     <% if @user.owner == false %>
       <% @flats.each do |list| %>
-        <div class="card-group border-secondary ">
-          <div class="card">
-            <img src="<%= image_path 'flats_7.webp'%>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= list.title %></h5>
-              <p class="card-text"><%= list.address  %>.</p>
-              <p class="card-textp">day/<%= list.price %>$</p>
-              <p class="card-text"><%= list.room_type %></p>
+        <div class="card-group">
+          <div class="griddy">
+            <div class="card">
+              <img src="<%= image_path 'flats_7.webp'%>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= list.title %></h5>
+                <p class="card-text"><%= list.address  %>.</p>
+                <p class="card-textp">day/<%= list.price %>$</p>
+                <p class="card-textt"><%= list.total_occupancy  %><i class="fa-solid fa-person"></i></p>
+              </div>
+              <div class="card-footer">
+                <%= link_to "View", flat_path(list), class: "card-btn"%>
+              </div>
             </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+            <div class="card">
+              <img src="<%= image_path 'flats_5.jpg'%>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= list.title %></h5>
+                <p class="card-text"><%= list.address  %>.</p>
+                <p class="card-textp">day/<%= list.price %>$</p>
+                <p class="card-textt"><%= list.total_occupancy  %><i class="fa-solid fa-person"></i></p>
+              </div>
+              <div class="card-footer">
+                <%= link_to "View", flat_path(list), class: "card-btn"%>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <img src="<%= image_path 'flats_5.jpg'%>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= list.title %></h5>
-              <p class="card-text"><%= list.address  %>.</p>
-              <p class="card-textp">day/<%= list.price %>$</p>
-              <p class="card-text"><%= list.room_type %></p>
-              <p class="card-text"><%= list.total_occupancy  %><i class="fa-solid fa-person"></i></p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 33 mins ago</small>
-            </div>
-          </div>
-          <div class="card">
-            <img src="<%= image_path 'flats_6.jpg' %>" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= list.title %></h5>
-              <p class="card-text"><%= list.address  %>.</p>
-              <p class="card-textp">day/<%= list.price %>$</p>
-              <p class="card-text"><%= list.room_type %></p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Last updated 15 mins ago</small>
+            <div class="card">
+              <img src="<%= image_path 'flats_6.jpg' %>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= list.title %></h5>
+                <p class="card-text"><%= list.address  %>.</p>
+                <p class="card-textp">day/<%= list.price %>$</p>
+                <p class="card-textt"><%= list.total_occupancy  %><i class="fa-solid fa-person"></i></p>
+              </div>
+              <div class="card-footer">
+                  <%= link_to "View", flat_path(list), class: "card-btn"%>
+                  <%# <a href="flat_path(list)" class="btn">Read more</a> %>
+              </div>
             </div>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-</body
+</body>
+

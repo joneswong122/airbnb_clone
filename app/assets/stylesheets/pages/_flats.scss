@@ -26,34 +26,111 @@
   row-gap: 20px;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+
+// colour stuff
+// @white: #ffffff;
+// @lightBG: #dce1df;
+// @salmon: #ff6666;
+
+// @teal: #0096a0;
+// @tealMid: #0ebac7;
+// @tealContrast: #33ffff;
+// @tealShade:	#007c85;
+
+// @darkGrey: #4f585e;
+
+
 .card {
   transition: all .5s ease;
   font-family:'Montserrat', sans-serif;
-  margin: 50px;
-  border-radius: 2em;
+
+  margin: 20px;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 2em;
   background-color: rgb(244, 238, 238);
+  justify-content: left;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card:hover {
-  border: 3px solid #FF5A5F;
-  transform: scale(1.05);
+  transform: scale(1.10);
   will-change: transform;
   color: #FF5A5F;
   background-color: #fff;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(255, 90, 95, 0.2) 5px 5px, rgba(255, 90, 95, 0.1) 10px 10px, rgba(255, 90, 95, 0.05) 20px 20px;
 }
+
 .card:hover::after {
   transform: translate(0, 0);
 }
+
+.card-title {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.card-textt {
+  color: #FF5A5F;
+  font-size: 30px;
+  text-align: left;
+}
+
 .card-text {
   color: black;
+  font-weight: 600;
 }
+
 .card-textp {
   color: black;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  text-align: bottom-right;
+  text-align: left;
+  ;
 }
+
 .card-group {
   display: flex;
   margin-top: 30px;
+}
+
+.card-action {
+  justify-content: center;
+  text-align: right;
+}
+
+.card-btn {
+  text-decoration: none;
+  transition: all .5s ease;
+  color: #FF5A5F;
+  width: 180px;
+  height: 50px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.card-btn:hover::after {
+  transform: translate(0, 0);
+}
+
+.card-btn:hover {
+border: 3px solid #FF5A5F;
+transform: scale(1.05);
+will-change: transform;
+color: #FF5A5F;
+background-color: rgb(244, 238, 238);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-footer:hover {
+  border-top: #FF5A5F;
+
 }

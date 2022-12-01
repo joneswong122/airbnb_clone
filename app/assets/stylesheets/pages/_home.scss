@@ -8,6 +8,7 @@
   color: #ff385c;
   font-weight:bolder;
 }
+
 .headline {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -46,7 +47,7 @@ p {
 .btn {
   transition: all .5s ease;
   color: #FF5A5F;
-  border: 3px solid #FF5A5F;
+  border: 2px solid #FF5A5F;
   font-family:'Montserrat', sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -64,7 +65,7 @@ p {
 }
 
 .btn:hover {
-  border: 3px solid #FF5A5F;
+  border: 2px solid #FF5A5F;
   transform: scale(1.05);
   will-change: transform;
   color: #FF5A5F;
@@ -81,4 +82,8 @@ p {
   background-color: #FF5A5F;
   opacity: 0.1;
   transition: all 1s ease;
+}
+
+.carousel-inner {
+  height: 50vh;
 }

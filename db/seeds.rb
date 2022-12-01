@@ -8,10 +8,10 @@
 require "open-uri"
 
 puts "Cleaning database..."
-Booking.destroy_all
-puts "Bookings deleted"
 Flat.destroy_all
 puts "Flats deleted"
+Booking.destroy_all
+puts "Bookings deleted"
 User.destroy_all
 puts "Users deleted"
 
@@ -30,10 +30,10 @@ flat6 =  { user: first_user, price: "205", title: "Flat 6", address: "High St, l
 
 [flat1, flat2, flat3, flat4, flat5, flat6].each do |attributes|
   file = URI.open("https://lh3.googleusercontent.com/blogger_img_proxy/ANbyha2ZclDOOI2jWMayud6MxiHtrzBB5oyNHVXYIw0hkncOCHnHbsjQxaAg16Yb6AQ3kMKhPvZ5n0lv9E6ugFvDKoc8oMgCetuioqAslhtte7FvMwN8gif8h-4BbeXMAsRjZ7Ip4Lhx-xLk3FAalpI99wIGbnF7g4yD31_k0dfL=s0-d")
-  @flat = Flat.new(attributes)
-  @flat.photo.attach(io: file, filename: "cozy.jpeg", content_type: "image/png")
-  @flat.save
-  puts "Created #{@flat.title}"
+  flat = Flat.new(attributes)
+  flat.photo.attach(io: file, filename: "cozy.jpeg", content_type: "image/png")
+  flat.save
+  puts "Created #{flat.title}"
 end
 
 puts "Finished!"
