@@ -1,17 +1,15 @@
 <div class="container">
-<h1>My Flats</h1>
-
-
+  <h1>My Flats</h1>
 
   <% if @user.owner == false %>
-    <div class="griddy">
-      <% @flats.each do |list| %>
-        <div class="card" style="width: 20rem;">
-          <div class="card-body">
-            <%#= cl_image_tag "vq01fmtcukkfjtechapz", height: 300, width: 400, crop: :fill %>
-            <%# <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
-            <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
-            <%# <li ><%= list.title    %>
+    <% @flats.each do |list| %>
+    <h1>Flats</h1>
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+        <%#= cl_image_tag "vq01fmtcukkfjtechapz", height: 300, width: 400, crop: :fill %>
+        <%# <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+          <img class="card-img-top" src = "<%= image_path 'firstflat1.jpg'%>" alt="img">
+            <li ><%= list.title    %></li>
             <li ><%= list.address    %></li>
             <li ><%= list.price  %></li>
             <li ><%= list.room_type  %></li>
