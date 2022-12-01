@@ -1,3 +1,4 @@
+
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
@@ -9,6 +10,7 @@ default: &default
   webpack_compile_output: true
 
   # Additional paths webpack should lookup modules
+
   # ['app/assets', 'engine/foo/app/assets']
   additional_paths: []
 
@@ -56,6 +58,7 @@ development:
     https: false
     host: localhost
     port: 3035
+
     public: localhost:3035
     hmr: false
     # Inline should be set to true if using HMR
@@ -70,6 +73,7 @@ development:
       'Access-Control-Allow-Origin': '*'
     watch_options:
       ignored: '**/node_modules/**'
+
 
 
 test:
@@ -88,5 +92,3 @@ production:
   # Extract and emit a css file
   extract_css: true
 
-  # Cache manifest.json for performance
-  cache_manifest: true
