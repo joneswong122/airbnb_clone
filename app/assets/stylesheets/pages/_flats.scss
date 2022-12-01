@@ -45,11 +45,10 @@
 .card {
   transition: all .5s ease;
   font-family:'Montserrat', sans-serif;
-
   margin: 20px;
   border-bottom-right-radius: 2em;
   border-bottom-left-radius: 2em;
-  background-color: rgb(244, 238, 238);
+  background-color: rgb(246, 246, 246);
   justify-content: left;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -85,7 +84,7 @@
 
 .card-textp {
   color: black;
-  text-align: left;
+  text-align: right;
   ;
 }
 
@@ -128,9 +127,4 @@ background-color: rgb(244, 238, 238);
   display: flex;
   justify-content: center;
   text-align: center;
-}
-
-.card-footer:hover {
-  border-top: #FF5A5F;
-
 }
