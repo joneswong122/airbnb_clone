@@ -37,6 +37,7 @@ file5 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/
 file6 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/room2_e8ojxy.webp")
 files = [file1, file2, file3, file4, file5, file6]
 
+
 files.each do |file|
   @flat = Flat.new(flats[i])
   @flat.photo.attach(io: file, filename: "file#{i + 1}.jpeg", content_type: "image/png")
