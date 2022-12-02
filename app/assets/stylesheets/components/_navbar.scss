@@ -1,9 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-
+  margin: 1%;
   background: rgba(245, 245, 245, 0.9);
   border: 1px solid black;
-
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,10 +14,9 @@
 }
 
 .nav-link {
-  color: #FF5A5F;
+  color: black;
   font-weight: 600;
   margin-right: 20px;
-  color: black;
 }
 
 .nav-link:hover {
@@ -29,10 +27,10 @@
 .avatar {
   height: 60px;
   width: 60px;
-
 }
 
 .avatar:hover {
   transform: scale(1.05);
   will-change: transform;
+  border: 2px solid #FF5A5F;
 }
