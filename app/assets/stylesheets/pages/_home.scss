@@ -93,6 +93,8 @@ p {
 .btn:hover::after {
     transform: translate(0, 0);
 
+}
+
 .carousel-control-prev:hover {
   background-color: #FF5A5F;
   opacity: 0.1;
@@ -137,7 +139,7 @@ p {
   float: left;
 }
 
-.footer-right{
+.footer-right {
   display: inline;
   float: right;
   width: 300px;
