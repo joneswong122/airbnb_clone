@@ -15,7 +15,6 @@
       </div>
       <div id="checky" class="col-md-3 justify-content-end bg-black text-white bg-opacity-75 m-auto pt-3">
         <%= simple_form_for [@flat, @booking], data: { controller: 'flatpickr'} do |f| %>
-
           <% if @user.owner == false %>
           <%= f.input :start_time, label: 'Check-in', as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
           <%= f.input :end_time, label: 'Check-out', as: :string, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_time' } %>
