@@ -4,7 +4,7 @@
     <%= link_to root_path, class: "navbar-brand" do %>
 
       <div id="logo" >
-         <h4 ><i class="fa-brands fa-airbnb size"></i>airbnb</h4>
+         <h4>&nbsp;<i class="fa-brands fa-airbnb size"></i></h4>
       </div>
 
     <% end %>
@@ -28,7 +28,8 @@
             <%= link_to "Flats", flats_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://res.cloudinary.com/doii0loun/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1669903224/MrT_azddo4.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%# <i class="fa-solid fa-house"> %>
+            <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU0iftAO8imgKArtQvaaLu1gL0NtbaL4St2dzgXTg&s", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
               <%= link_to "", "#", class: "dropdown-item" %>

@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+body {
+  // background-color: rgba(73, 113, 116, 0.7);
+  background-color: rgba(163, 180, 162, 0.3);
+}
+
 #logo .size {
     color: #ff385c;
     font-size: 50px;
@@ -17,6 +22,22 @@
   color: inherit;
 }
 
+.carousel-inner {
+  height: 50vh;
+  margin-top: 30px;
+}
+.carousel-control-prev:hover {
+  background-color: #FF5A5F;
+  opacity: 0.1;
+  transition: all 1s ease;
+}
+
+.carousel-control-next:hover {
+  background-color: #FF5A5F;
+  opacity: 0.1;
+  transition: all 1s ease;
+}
+
 .carousel-caption {
   position: absolute;
   right: 15%;
@@ -27,10 +48,6 @@
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
-}
-
-.carousel-inner {
-  margin-top: 30px;
 }
 
 p {
@@ -60,10 +77,6 @@ p {
   margin: 20px;
 }
 
-.btn:hover::after {
-    transform: translate(0, 0);
-}
-
 .btn:hover {
   border: 2px solid #FF5A5F;
   transform: scale(1.05);
@@ -72,18 +85,6 @@ p {
   background-color: #fff;
 }
 
-.carousel-control-prev:hover {
-  background-color: #FF5A5F;
-  opacity: 0.1;
-  transition: all 1s ease;
-}
-
-.carousel-control-next:hover {
-  background-color: #FF5A5F;
-  opacity: 0.1;
-  transition: all 1s ease;
-}
-
-.carousel-inner {
-  height: 50vh;
+.btn:hover::after {
+    transform: translate(0, 0);
 }
