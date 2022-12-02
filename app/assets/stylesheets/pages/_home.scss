@@ -6,12 +6,16 @@ body {
 
 #logo .size {
     color: #ff385c;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #logo h4 {
   color: #ff385c;
   font-weight:bolder;
+}
+
+body {
+  background-color: #fceded;
 }
 
 .headline {
@@ -85,6 +89,25 @@ p {
   background-color: #fff;
 }
 
+
 .btn:hover::after {
     transform: translate(0, 0);
+
+.carousel-control-prev:hover {
+  background-color: #FF5A5F;
+  opacity: 0.1;
+  transition: all 1s ease;
+  height: 60vh;
+}
+
+.carousel-control-next:hover {
+  background-color: #FF5A5F;
+  opacity: 0.1;
+  transition: all 1s ease;
+  height: 50vh;
+}
+
+.carousel-inner {
+  height: 50vh;
+
 }

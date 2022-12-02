@@ -15,14 +15,15 @@
       </div>
       <div id="checky" class="col-md-3 justify-content-end bg-black text-white bg-opacity-75 m-auto pt-3">
         <%= simple_form_for [@flat, @booking], data: { controller: 'flatpickr'} do |f| %>
-        <% if @user.owner == false %>
-        <%= f.input :start_time, label: ' Check-in', as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
-        <%= f.input :end_time, label: ' Check-out', as: :string, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_time' } %>
-        <%= f.input :status, label: ' Guests', as: :select, collection: [['1', '0']] %>
-        <div class="d-grid">
-          <%= f.submit class: "btn btn-primary mx-auto pb-2" %>
-        </div>
-        <div>
+
+          <% if @user.owner == false %>
+          <%= f.input :start_time, label: 'Check-in', as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+          <%= f.input :end_time, label: 'Check-out', as: :string, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_time' } %>
+          <%= f.input :status, label: 'Guests', as: :select, collection: [['Send Request', '0']] %>
+          <div class="d-grid">
+            <%= f.submit class: "btn btn-primary mx-auto pb-2" %>
+          </div>
+
           <% else %>
           <%= f.input :status, label: 'Approval', as: :radio_buttons, collection: [['Reject', '1'], ['Confrim', '2']] %>
           <%= f.submit class: "btn btn-primary mx-auto pb-2" %>

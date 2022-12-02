@@ -8,10 +8,10 @@
 require "open-uri"
 
 puts "Cleaning database..."
-Flat.destroy_all
-puts "Flats deleted"
 Booking.destroy_all
 puts "Bookings deleted"
+Flat.destroy_all
+puts "Flats deleted"
 User.destroy_all
 puts "Users deleted"
 
@@ -21,19 +21,36 @@ puts "#{first_user.email} is created"
 
 puts "Creating flats..."
 
-flat1 = { user: first_user, price: "289", title: "Flat 1", address: "7 Boundary St, London E2 7JE", total_occupancy: "1", room_type: "single"  }
-flat2 = { user: first_user, price: "339", title: "Flat 2", address: "56A Shoreditch High St, London E1 6PQ", total_occupancy: "2", room_type: "double" }
-flat3 = { user: first_user, price: "169", title: "Flat 3", address: "75008 Paris", total_occupancy: "4", room_type: "single" }
-flat4 =  { user: first_user, price: "249", title: "Flat 4", address: "High St, Southampton", total_occupancy: "5", room_type: "double" }
-flat5 =  { user: first_user, price: "200", title: "Flat 5", address: "High St, Menchester", total_occupancy: "6", room_type: "family" }
-flat6 =  { user: first_user, price: "305", title: "Flat 6", address: "High St, london", total_occupancy: "4", room_type: "family" }
+flat1 = { user: first_user, price: "100", title: "You are on Right Place", city: "London", address: "7 Boundary St, London E2 7JE", total_occupancy: "1 Guest", room_type: "Single Room"  }
+flat2 = { user: first_user, price: "102", title: "One Place, Many Things", city: "London", address: "56A Shoreditch High St, London E1 6PQ", total_occupancy: "2 Guest", room_type: "Double Room" }
+flat3 = { user: first_user, price: "105", title: "The joy of Living at Best", city: "Paris", address: "75008 Paris", total_occupancy: "4 or more guest", room_type: "Single Room" }
+flat4 =  { user: first_user, price: "250", title: "Let Living at Right Place", city: "Southampton", address: "High St, Southampton", total_occupancy: "4 or more guest", room_type: "Family Room" }
+flat5 =  { user: first_user, price: "200", title: "The dreamy atmosphere", city: "Menchester", address: "High St, Menchester", total_occupancy: "4 or more guest", room_type: "Others" }
+flat6 =  { user: first_user, price: "205", title: "Happy People, Happy Living", city: "London", address: "High St, london", total_occupancy: "4 or more guest", room_type: "Family Room" }
+flats = [flat1, flat2, flat3, flat4, flat5, flat6]
+i = 0
+file1 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915975/firstflat1_ulcfln.jpg")
+file2 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915975/flats_5_ihdpyg.jpg")
+file3 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915975/flats_6_xmd9e2.jpg")
+file4 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915974/flat_4_qrzubn.webp")
+file5 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/room1_v4zt3c.jpg")
+file6 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/room2_e8ojxy.webp")
+files = [file1, file2, file3, file4, file5, file6]
 
-[flat1, flat2, flat3, flat4, flat5, flat6].each do |attributes|
-  file = URI.open("https://lh3.googleusercontent.com/blogger_img_proxy/ANbyha2ZclDOOI2jWMayud6MxiHtrzBB5oyNHVXYIw0hkncOCHnHbsjQxaAg16Yb6AQ3kMKhPvZ5n0lv9E6ugFvDKoc8oMgCetuioqAslhtte7FvMwN8gif8h-4BbeXMAsRjZ7Ip4Lhx-xLk3FAalpI99wIGbnF7g4yD31_k0dfL=s0-d")
-  flat = Flat.new(attributes)
-  flat.photo.attach(io: file, filename: "cozy.jpeg", content_type: "image/png")
-  flat.save
-  puts "Created #{flat.title}"
+
+files.each do |file|
+  @flat = Flat.new(flats[i])
+  @flat.photo.attach(io: file, filename: "file#{i + 1}.jpeg", content_type: "image/png")
+  @flat.save
+  puts "Created #{@flat.title}"
+  i += 1
 end
+
+# [flat1, flat2, flat3, flat4, flat5, flat6].each do |attributes|
+#   @flat = Flat.new(attributes)
+#   @flat.photo.attach(io: file, filename: "file1.jpeg", content_type: "image/png")
+#   @flat.save
+#   puts "Created #{@flat.title}"
+# end
 
 puts "Finished!"

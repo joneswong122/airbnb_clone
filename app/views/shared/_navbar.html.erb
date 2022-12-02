@@ -17,7 +17,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li>
-            <form class="d-flex" role="search">
+            <form class="search-box d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
           </li>
@@ -28,8 +28,10 @@
             <%= link_to "Flats", flats_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
+
           <%# <i class="fa-solid fa-house"> %>
             <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU0iftAO8imgKArtQvaaLu1gL0NtbaL4St2dzgXTg&s", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
               <%= link_to "", "#", class: "dropdown-item" %>

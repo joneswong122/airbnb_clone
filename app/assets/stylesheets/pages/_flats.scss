@@ -78,6 +78,7 @@
   border-bottom-right-radius: 2em;
   border-bottom-left-radius: 2em;
   background-color:  whitesmoke;
+
   justify-content: left;
   // box-shadow: 5px -5px rgba(0,0,0,0.3);
   //  -moz-box-shadow: 5px -5px rgba(0,0,0,0.3);
@@ -89,8 +90,7 @@
 .card:hover {
   transform: scale(1.10);
   will-change: transform;
-  color: #FF5A5F;
-  background-color: #fff;
+  background-color: rgb(250, 249, 249);
   // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   box-shadow: rgba(255, 90, 95, 0.2) 5px 5px, rgba(255, 90, 95, 0.1) 10px 10px, rgba(255, 90, 95, 0.05) 15px 15px;
 }
@@ -104,16 +104,20 @@
   font-weight: 800;
 }
 
+
+.card-textt {
+  color: #FF5A5F;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
 .card-text {
   color: black;
   font-weight: 600;
 }
 
-.card-textt {
-  color: black;
-  font-size: 20px;
-  text-align: left;
-}
+
 
 .card-textp {
   color: black;
@@ -123,6 +127,10 @@
 .card-group {
   display: flex;
   margin-top: 30px;
+}
+
+.card-group img {
+  height: 250px;
 }
 
 .card-action {
@@ -169,3 +177,4 @@
 .card-footer:hover {
   border-top: #FF5A5F;
 }
+

@@ -4,8 +4,20 @@
 <br>
 
 <% @bookings.each do |booking| %>
+  <%= booking.flat.title %>
+  <br>
   <%= booking.flat.address %>
-  button
+  <br>
+  <%= booking.flat.city %>
+  <br>
+  <%= booking.start_time.strftime(' %a, %d %B, %Y, %H:%M %P') %>
+  <br>
+  <%= booking.end_time.strftime(' %a, %d %B, %Y, %H:%M %P') %>
+  <br>
+  <%= booking.flat.total_occupancy %>
+  <br>
+  <%= booking.user.email %>
+  <hr>
   <%= link_to "visit", flat_path(booking.flat)  %><br>
   <% link_to "info", booking_path(booking)%><br>
 <% end %>
