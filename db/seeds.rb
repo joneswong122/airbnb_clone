@@ -21,12 +21,12 @@ puts "#{first_user.email} is created"
 
 puts "Creating flats..."
 
-flat1 = { user: first_user, price: "100", title: "You are on Right Place", city: "London", address: "7 Boundary St, London E2 7JE", total_occupancy: "1 Guest", room_type: "Single Room"  }
-flat2 = { user: first_user, price: "102", title: "One Place, Many Things", city: "London", address: "56A Shoreditch High St, London E1 6PQ", total_occupancy: "2 Guest", room_type: "Double Room" }
-flat3 = { user: first_user, price: "105", title: "The joy of Living at Best", city: "Paris", address: "75008 Paris", total_occupancy: "4 or more guest", room_type: "Single Room" }
-flat4 =  { user: first_user, price: "250", title: "Let Living at Right Place", city: "Southampton", address: "High St, Southampton", total_occupancy: "4 or more guest", room_type: "Family Room" }
-flat5 =  { user: first_user, price: "200", title: "The dreamy atmosphere", city: "Menchester", address: "High St, Menchester", total_occupancy: "4 or more guest", room_type: "Others" }
-flat6 =  { user: first_user, price: "205", title: "Happy People, Happy Living", city: "London", address: "High St, london", total_occupancy: "4 or more guest", room_type: "Family Room" }
+flat1 = { user: first_user, price: "199", title: "Dream Flat", city: "London", address: "7 Boundary St, London E2 7JE", total_occupancy: "1 Guest", room_type: "Single Room"  }
+flat2 = { user: first_user, price: "239", title: "One Place, Many Things", city: "London", address: "56A Shoreditch High St, London E1 6PQ", total_occupancy: "2 Guest", room_type: "Double Room" }
+flat3 = { user: first_user, price: "249", title: "The joy of Living in Luxury", city: "Paris", address: "75008 Paris", total_occupancy: "4 or more guest", room_type: "Single Room" }
+flat4 =  { user: first_user, price: "90", title: "The Right Place To Live", city: "Southampton", address: "High St, Southampton", total_occupancy: "4 or more guest", room_type: "Family Room" }
+flat5 =  { user: first_user, price: "120", title: "A dreamy atmosphere", city: "Manchester", address: "Duke St, Manchester", total_occupancy: "4 or more guest", room_type: "Others" }
+flat6 =  { user: first_user, price: "149.99", title: "Happy People, Happy Living", city: "London", address: "High St, london", total_occupancy: "4 or more guest", room_type: "Family Room" }
 flats = [flat1, flat2, flat3, flat4, flat5, flat6]
 i = 0
 file1 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915975/firstflat1_ulcfln.jpg")
@@ -36,6 +36,7 @@ file4 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915974/
 file5 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/room1_v4zt3c.jpg")
 file6 = URI.open("https://res.cloudinary.com/doii0loun/image/upload/v1669915973/room2_e8ojxy.webp")
 files = [file1, file2, file3, file4, file5, file6]
+
 
 files.each do |file|
   @flat = Flat.new(flats[i])

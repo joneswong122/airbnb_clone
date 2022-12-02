@@ -1,16 +1,19 @@
-<div class="container p-auto mt-3 ">
-  <div class="row mx-auto">
-      <div class="col-md-8 bg-white bg-opacity-50">
+<%# <%= stylesheet_link_tag('show') %>
+<div id="mt-3" class="container p-auto">
+  <div class="row mx-auto mt-3">
+      <div id="whitey" class="col-md-7 border-left p-3">
         <%= cl_image_tag @flat.photo.key, class: "m-3", height: 300, width: 400, crop: :fill %>
-        <div class="alert-success" role="alert">
-        <h2 class="m-auto alert-heading"> <%= @flat.title %></h2>
+        <div class="alert-success" role="alert"></div>
+        <div id="alllign">
+          <h5 class="m-auto alert-heading"> <%= @flat.title %></h5><br>
+          <h5 class="m-auto"><%= @flat.address %></h5>
+          <h5 class="m-auto"> £ <%= @flat.price %></h5>
+          <%# <h5 class="m-auto">Max Guests: <%= @flat.total_occuh5ancy %>
+          <h5 class="mb-3"><%= @flat.room_type.capitalize %></h5><br>
+          <h6> Perfect place to get some space from your partner.</h6>
         </div>
-        <h4 class="m-auto">Address:  <%= @flat.address %></h4>
-        <h4 class="m-auto"> £<%= @flat.price %></h4>
-        <h4 class="m-auto">Rooms: <%= @flat.total_occupancy %></h4>
-        <h4 class="mb-3">Room Type: <%= @flat.room_type %></h4>
       </div>
-      <div class="col-md-4 bg-black text-white bg-opacity-75 m-auto pt-2">
+      <div id="checky" class="col-md-3 justify-content-end bg-black text-white bg-opacity-75 m-auto pt-3">
         <%= simple_form_for [@flat, @booking], data: { controller: 'flatpickr'} do |f| %>
           <% if @user.owner == false %>
           <%= f.input :start_time, label: 'Check-in', as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
@@ -19,11 +22,16 @@
           <div class="d-grid">
             <%= f.submit class: "btn btn-primary mx-auto pb-2" %>
           </div>
+
           <% else %>
           <%= f.input :status, label: 'Approval', as: :radio_buttons, collection: [['Reject', '1'], ['Confrim', '2']] %>
           <%= f.submit class: "btn btn-primary mx-auto pb-2" %>
           <% end  %>
           <% end %>
         </div>
-      </div>
-    </div>
+  </div>
+  <div id="box" class="col-md-5 border-left">
+    <img src="https://a0.muscache.com/im/pictures/54e427bb-9cb7-4a81-94cf-78f19156faad.jpg" width="215" height="50">
+    <span class="caption">Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</span>
+  </div>
+</div>

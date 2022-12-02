@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #fceded;
+  margin: 1%;
+  background: rgba(163, 180, 162, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,29 +14,23 @@
 }
 
 .nav-link {
-  color: #FF5A5F;
+  color: black;
   font-weight: 600;
   margin-right: 20px;
-  border: 1px ease #FF5A5F;
 }
 
 .nav-link:hover {
   transform: scale(1.05);
   will-change: transform;
-  color: #FF5A5F;
 }
 
 .avatar {
   height: 60px;
   width: 60px;
-  border: 2px solid #FF5A5F;
 }
 
 .avatar:hover {
   transform: scale(1.05);
   will-change: transform;
-}
-
-search-box {
-  color: #FF5A5F;
+  border: 2px solid #FF5A5F;
 }
